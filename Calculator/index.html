@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <title>Calculator</title>
+    <meta name="calculator" content="HTML, CSS, JavaScript">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<div id="calculator" >
+
+    <!-- Screen and clear key -->
+    <div class="top">
+        <span class="clear" >C</span>
+        <div class="screen"></div>
+    </div>
+    <div>
+        <p></p>
+    </div>
+    <div class="keys" >
+        <!-- operators and other keys -->
+        <span class="operator" >+</span>
+        <span class="operator" >-</span>
+        <span class="del_last">&lt;-</span>
+        <span data-tooltip>1</span>
+        <span data-tooltip>2</span>
+        <span data-tooltip>3</span>
+
+        <span class="eval">=</span>
+
+    </div>
+
+</div>
+
+<!-- calclogic -->
+<script src="js/logic.js"
+        type="text/javascript"></script>
+</body>
+</html>

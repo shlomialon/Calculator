@@ -1,0 +1,161 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* Better text styling */
+    font: bold 14px Arial;
+}
+html {
+    heignt: 100%;
+    background: white;
+}
+#calculator {
+    width: 265px;
+    height: auto;
+    margin: 100px auto;
+    padding: 20px 20px 9px;
+    background: #e0e0eb;
+    border-radius: 5px;
+}
+/*line 1*/
+.top span.clear {
+    float: left;
+}
+
+.top .screen {
+    height: 40px;
+    width: 160px;
+    margin-bottom: 30px;
+    float: left;
+
+    padding: 2px 10px;
+
+    /*ans box*/
+    background:white;
+    color: black;
+    border-radius: 12px;
+
+    /* write style */
+    font-size: 20px;
+    line-height: 40px;
+    text-align: right;
+    /* space between numbers*/
+    letter-spacing: 1px;
+}
+
+/*Clear screen*/
+.keys, .top{
+
+    overflow: hidden;
+}
+
+.keys span, .top span.clear{
+    float: left;
+    position: relative;
+
+    top: 0;
+    width: 66px;
+    height: 36px;
+    background: white;
+    margin: 0 7px 14px 0;
+    /*style of number bottoms*/
+    line-height: 36px;
+    text-align: center;
+    /* unable text inside keys */
+    -webkit-user-select: none;
+}
+.top span.clear {
+    background: #666666;
+    color: white;
+    border-radius: 12px;
+    padding: 2px 10px;
+    height: auto;
+    width: 50px;
+}
+
+/*operator keys order*/
+span.operator{margin-right: 8px;}
+
+/* style keys operators*/
+.keys span.operator {
+    background:  #666666;
+    color: white;
+}
+
+.keys span.eval {
+    background:  #666666;
+    color: white;
+    width: 215px;
+    text-align: center;
+}
+
+.keys span.del_last {
+    background:  #666666;
+    color: white;
+}
+
+/*//////////////////////////////////////////*/
+
+[data-tooltip] {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+    visibility: hidden;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-bottom: 10px;
+    margin-left: -80px;
+    padding: 7px;
+    width: 160px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #000;
+    background-color: hsla(0, 0%, 20%, 0.9);
+    color: white;
+    content: attr(data-tooltip);
+    text-align: center;
+    font-size: 14px;
+    line-height: 4;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -5px;
+    width: 0;
+    border-top: 5px solid #000;
+    border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+    visibility: visible;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+}
